@@ -1,4 +1,4 @@
-import  math
+import math
 
 print(math.ceil(3.5))   # 4 올림
 print(math.ceil(3.4))   # 4
