@@ -105,4 +105,9 @@ while True:
     print(list_class)
 
 # 랜덤으로 섞기
+random.shuffle(list_class)
 # 출력
+# print(list_class)
+print('자리\t학생번호')
+for index, n in enumerate(list_class):
+    print(f'{index + 1}\t{n}')
