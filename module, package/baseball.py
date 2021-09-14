@@ -1,7 +1,7 @@
 from  baseball_game_engine import make_quize, check
 
 answer = make_quize()
-print(answer)
+# print(answer)
 
 # 무한 반복
 while True:
