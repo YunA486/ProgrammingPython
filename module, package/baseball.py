@@ -14,8 +14,10 @@ while True:
         continue                    # 밑에 실행 X, 반복문 다시
 
     # 길이가 3이 아닐 때 에러 처리
-    if len(player) != 3:
-        raise InvalidCountError("3자리가 아닙니다.")
+    if len(player) != len(answer):
+        # raise InvalidCountError("3자리가 아닙니다.")
+        print(f'입력한 숫자의 개수가 정답과 다릅니다. 정답 : {len(answer)}글자')
+        continue
 
     # strike, ball 확인하기
     strike, ball = check(answer, player)
