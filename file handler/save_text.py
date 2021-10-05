@@ -5,3 +5,9 @@ f.write('\n')
 f.write('월드')
 
 f.close()
+
+print('with')
+with open('text.txt', 'w') as f:
+    f.write('hello')
+    f.write('\n')
+    f.write('월드')
