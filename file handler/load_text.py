@@ -9,7 +9,7 @@ print('한꺼번에 전체 읽기')
 
 with open('text.txt', 'r') as f:
     data = f.read()
-print(data)
+    print(data)
 
 print('한 줄씩 읽기')
 with open('text.txt', 'r') as f:
