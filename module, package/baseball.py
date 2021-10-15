@@ -4,10 +4,34 @@ from custom_error import InvalidCountError
 answer = make_quize()
 # print(answer)
 
+count = 0
+
 # 무한 반복
+def save_history(player, count):
+    with open('baseball_history.txt', 'a') as f:
+        f.write(f'{player}\t{count}\n')
+
+
+def load_history():
+    count_list = []
+    with open('baseball_history.txt', 'r') as f:
+        while True:
+            line = f.readline()
+            if line == '' or not line:
+                break
+            # print(line.rstrip())
+            line_data = line.rstrip().split('\t')
+            count_list.append(line_data[1])
+    count_list.sort()
+    return count_list[:3]
+
 while True:
     # 숫자 3자리 중복없이 묻기
-    player = input("숫자 세자리는?")  # player : "123" "fun"
+    player = input("숫자 세자리는?(t : top3)")  # player : "123" "fun"
+    if player == 't':
+        history = load_history()
+        print(history)
+        continue
     try:        # 숫자가 아닐 때 에러 처리
         player_int = int(player)    # valueError
     except ValueError:
@@ -20,11 +44,13 @@ while True:
         continue
 
     # strike, ball 확인하기
+    count += 1
     strike, ball = check(answer, player)
     # 출력하기
-    print(f'{player}\tstrike: {strike}\t ball: {ball}')
+    print(f'{player}\tstrike: {strike}\t ball: {ball}\tball: {ball}\t{count}t')
     # strike가 3일 때, 나가기
     if strike == 3:
+        save_history(player, count)
         break
 
 # 축하해주기
