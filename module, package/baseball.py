@@ -11,7 +11,6 @@ def save_history(player, count):
     with open('baseball_history.txt', 'a') as f:
         f.write(f'{player}\t{count}\n')
 
-
 def load_history():
     count_list = []
     with open('baseball_history.txt', 'r') as f:
@@ -22,6 +21,9 @@ def load_history():
             # print(line.rstrip())
             line_data = line.rstrip().split('\t')
             count_list.append(line_data[1])
+    # 중복제거 (commit - top3 중복 제거)
+    count_list = set(count_list)
+    count_list = list(count_list)
     count_list.sort()
     return count_list[:3]
 
@@ -29,7 +31,12 @@ while True:
     # 숫자 3자리 중복없이 묻기
     player = input("숫자 세자리는?(t : top3)")  # player : "123" "fun"
     if player == 't':
-        history = load_history()
+        # 에러처리 반드시
+        try:    #(commit - FileNotFoundError 처리)
+            history = load_history()
+        except FileNotFoundError:
+            print('history 파일이 존재하지 않습니다.')
+            continue
         print(history)
         continue
     try:        # 숫자가 아닐 때 에러 처리
