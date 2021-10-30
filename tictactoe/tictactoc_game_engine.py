@@ -17,9 +17,23 @@ class TictactoeGameEngine:
         return self.SIZE * (row - 1) + (col - 1)
 
     def set_winner(self):
-        pass
-
-    # tictactoe game set Winner
+        # - 3줄
+        for row in range(1, 3+1):   # row : 1~3 반복
+            if self.board[self.position_to_index(row,1)] == self.board[self.position_to_index(row,2)] == self.board[self.position_to_index(row,3)] == self.turn:    # '.'일 때, 끝 안나게 하기
+                return self.turn
+        # | 3줄
+        for col in range(1, 3+1):   # col : 1~3 반복
+            if self.board[self.position_to_index(1,col)] == self.board[self.position_to_index(2,col)] == self.board[self.position_to_index(3,col)] == self.turn:    # '.'일 때, 끝 안나게 하기
+                return self.turn
+        # / 3줄
+        if self.board[self.position_to_index(1,1)] == self.board[self.position_to_index(2,2)] == self.board[self.position_to_index(3,3)] == self.turn:    # '.'일 때, 끝 안나게 하기
+            return self.turn
+        # \ 3줄
+        if self.board[self.position_to_index(1,3)] == self.board[self.position_to_index(2,2)] == self.board[self.position_to_index(3,1)] == self.turn:    # '.'일 때, 끝 안나게 하기
+            return self.turn
+        # 비기는 조건 : 다 채워졌을 때 위의 것에 해당 안됐을 때
+        if not '.' in self.board:   # self.board 안에 '.'이 없다면
+            return 'd'  # draw
 
     def change_turn(self):
         # self.turn 'X'면  'O', 'O'면 'X'로 바꾸기
