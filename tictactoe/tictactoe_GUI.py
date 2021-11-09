@@ -26,10 +26,23 @@ class TictactoeGUI:
         self.root.mainloop()
 
     def click_handler(self, event):
-        print('click')
+        # input event.x, event.y -> row, col
+        row, col = self.coordinate_to_position(event.x, event.y)
+        # set row, col
+        self.game_engine.set(row, col)
+        # show board
+        self.game_engine.show_board()
+        # set winner
+
+        # 승자가 있거나 무승부일 때, 게임오버, 결과 출력
+        # change turn
+        pass
 
     def draw_board(self):
         pass
+
+    def coordinate_to_position(self, x, y):
+        return 2,2
 
 
 if __name__ == '__main__':
