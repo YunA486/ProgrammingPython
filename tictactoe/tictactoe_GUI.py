@@ -1,4 +1,5 @@
 import tkinter
+from tkinter import messagebox
 
 from tictactoc_game_engine import TictactoeGameEngine
 
@@ -33,8 +34,9 @@ class TictactoeGUI:
         # show board
         self.game_engine.show_board()
         # set winner
-
+        winner = self.game_engine.set_winner()
         # 승자가 있거나 무승부일 때, 게임오버, 결과 출력
+
         # change turn
         pass
 
@@ -42,7 +44,22 @@ class TictactoeGUI:
         pass
 
     def coordinate_to_position(self, x, y):
-        return 2,2
+
+        if 0 <= x < 100:
+            col = 1
+        elif 100 <= x < 200:
+            col = 2
+        elif 200 <= x < 300:
+            col = 3
+
+        if 0 <= y < 100:
+            row = 1
+        elif 100 <= y < 200:
+            row = 2
+        elif 200 <= y < 300:
+            row = 3
+
+        return row, col
 
 
 if __name__ == '__main__':
