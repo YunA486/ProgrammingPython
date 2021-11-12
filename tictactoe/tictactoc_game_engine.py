@@ -42,7 +42,7 @@ class TictactoeGameEngine:
         # else:
         #     self.turn = 'X'
 
-        self.turn = '0' if self.turn == 'X' else 'X'  # 한줄로 바꿈
+        self.turn = 'O' if self.turn == 'X' else 'X'  # 한줄로 바꿈
 
 if __name__ == '__main__':
     game_engine = TictactoeGameEngine()

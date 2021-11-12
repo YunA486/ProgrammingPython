@@ -20,7 +20,7 @@ class TictactoeGUI:
 
         self.images = {}
         self.images['X'] = tkinter.PhotoImage(file='X.gif')
-        self.images['O'] = tkinter.PhotoImage(file='o.gif')
+        self.images['O'] = tkinter.PhotoImage(file='O.gif')
 
         self.canvas.bind('<Button-1>', self.click_handler)  #****중요(시험에 낼 수도..) - click_handler에 ()없음, 실행 x
 
@@ -32,32 +32,55 @@ class TictactoeGUI:
         # set row, col
         self.game_engine.set(row, col)
         # show board
-        self.game_engine.show_board()
+        self.draw_board()
         # set winner
         winner = self.game_engine.set_winner()
         # 승자가 있거나 무승부일 때, 게임오버, 결과 출력
-
+        if winner == 'X' or winner == 'O':
+            messagebox.showinfo('Game Over', f'{winner} 이김')
+            self.root.quit()
+        elif winner == 'd':
+            messagebox.showinfo('Game Over', '무승부')
+            self.root.quit()
         # change turn
-        pass
+        self.game_engine.change_turn()
 
     def draw_board(self):
-        pass
+        TILE_SIZE = self.CANVAS_SIZE // self.game_engine.SIZE   # 100
+        # clear
+        self.canvas.delete('all')
+
+        x = 0
+        y = 0
+        for i, v in enumerate(self.game_engine.board):
+            if v == '.':
+                pass
+            else:   # elif v == 'X' or v == 'O':
+                self.canvas.create_image(x, y, anchor='nw', image=self.images[v])
+            x += TILE_SIZE
+            if i % self.game_engine.SIZE == self.game_engine.SIZE - 1:
+                x = 0
+                y += TILE_SIZE
 
     def coordinate_to_position(self, x, y):
 
-        if 0 <= x < 100:
-            col = 1
-        elif 100 <= x < 200:
-            col = 2
-        elif 200 <= x < 300:
-            col = 3
+        # if 0 <= x < 100:
+        #     col = 1
+        # elif 100 <= x < 200:
+        #     col = 2
+        # elif 200 <= x < 300:
+        #     col = 3
+        #
+        # if 0 <= y < 100:
+        #     row = 1
+        # elif 100 <= y < 200:
+        #     row = 2
+        # elif 200 <= y < 300:
+        #     row = 3
 
-        if 0 <= y < 100:
-            row = 1
-        elif 100 <= y < 200:
-            row = 2
-        elif 200 <= y < 300:
-            row = 3
+        row = y // (self.CANVAS_SIZE // self.game_engine.SIZE) + 1
+        # col = x // 100 + 1
+        col = x // (self.CANVAS_SIZE // self.game_engine.SIZE) + 1
 
         return row, col
 
