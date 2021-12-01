@@ -11,6 +11,8 @@ import webbrowser
 # print(pygame.font.get_fonts())  # 글꼴 종류 출력
 # 휴먼모음t 휴먼편지체 휴먼둥근헤드라인 펜흘림 중간안상수체
 
+# 행복의 속도, 러브 어페어 파일 안됨
+
 class MovieGUI:
     def __init__(self):
         self.first_GUI()
@@ -35,7 +37,7 @@ class MovieGUI:
         btn1 = Button(self.root, image=photo1, command=self.dune_GUI)
         btn1.place(x="60", y="100")
 
-        label1 = Label(self.root, text="듄", bg="white")
+        label1 = Label(self.root, text="듄", font=("휴먼편지체", 10), bg="white")
         label1.place(x="115", y="285")
 
         # 유체이탈자 버튼
@@ -43,7 +45,7 @@ class MovieGUI:
         btn2 = Button(self.root, image=photo2)
         btn2.place(x="250", y="100")
 
-        label2 = Label(self.root, text="유체이탈자", bg="white")
+        label2 = Label(self.root, text="유체이탈자", font=("휴먼편지체", 10), bg="white")
         label2.place(x="285", y="285")
 
         # 연애 빠진 로맨스 버튼
@@ -51,7 +53,7 @@ class MovieGUI:
         btn3 = Button(self.root, image=photo3)
         btn3.place(x="440", y="100")
 
-        label3 = Label(self.root, text="연애 빠진 로맨스", bg="white")
+        label3 = Label(self.root, text="연애 빠진 로맨스", font=("휴먼편지체", 10), bg="white")
         label3.place(x="458", y="285")
 
         # 엔칸토-마법의 세계 버튼
@@ -59,7 +61,7 @@ class MovieGUI:
         btn4 = Button(self.root, image=photo4)
         btn4.place(x="630", y="100")
 
-        label4 = Label(self.root, text="엔칸토-마법의 세계", bg="white")
+        label4 = Label(self.root, text="엔칸토-마법의 세계", font=("휴먼편지체", 10), bg="white")
         label4.place(x="640", y="285")
 
         # 이터널스 버튼
@@ -67,7 +69,7 @@ class MovieGUI:
         btn5 = Button(self.root, image=photo5)
         btn5.place(x="820", y="100")
 
-        label5 = Label(self.root, text="이터널스", bg="white")
+        label5 = Label(self.root, text="이터널스", font=("휴먼편지체", 10), bg="white")
         label5.place(x="860", y="285")
 
         # 장르만 로맨스 버튼
@@ -75,7 +77,7 @@ class MovieGUI:
         btn6 = Button(self.root, image=photo6)
         btn6.place(x="1010", y="100")
 
-        label6 = Label(self.root, text="장르만 로맨스", bg="white")
+        label6 = Label(self.root, text="장르만 로맨스", font=("휴먼편지체", 10), bg="white")
         label6.place(x="1035", y="285")
 
         # 프렌치 디스패치 버튼
@@ -83,7 +85,7 @@ class MovieGUI:
         btn7 = Button(self.root, image=photo7)
         btn7.place(x="60", y="325")
 
-        label7 = Label(self.root, text="프렌치 디스패치", bg="white")
+        label7 = Label(self.root, text="프렌치 디스패치", font=("휴먼편지체", 10), bg="white")
         label7.place(x="80", y="510")
 
         # 너에게 가는 길 버튼
@@ -91,7 +93,7 @@ class MovieGUI:
         btn8 = Button(self.root, image=photo8)
         btn8.place(x="250", y="325")
 
-        label8 = Label(self.root, text="너에게 가는 길", bg="white")
+        label8 = Label(self.root, text="너에게 가는 길", font=("휴먼편지체", 10), bg="white")
         label8.place(x="273", y="510")
 
         # 라임 크라임 버튼
@@ -99,7 +101,7 @@ class MovieGUI:
         btn9 = Button(self.root, image=photo9)
         btn9.place(x="440", y="325")
 
-        label9 = Label(self.root, text="라임 크라임", bg="white")
+        label9 = Label(self.root, text="라임 크라임", font=("휴먼편지체", 10), bg="white")
         label9.place(x="473", y="510")
 
         # 애비규환 버튼
@@ -107,7 +109,7 @@ class MovieGUI:
         btn10 = Button(self.root, image=photo10)
         btn10.place(x="630", y="325")
 
-        label10 = Label(self.root, text="애비규환", bg="white")
+        label10 = Label(self.root, text="애비규환", font=("휴먼편지체", 10), bg="white")
         label10.place(x="670", y="510")
 
         # 로그북 버튼
@@ -115,7 +117,7 @@ class MovieGUI:
         btn11 = Button(self.root, image=photo11)
         btn11.place(x="820", y="325")
 
-        label11 = Label(self.root, text="로그북", bg="white")
+        label11 = Label(self.root, text="로그북", font=("휴먼편지체", 10), bg="white")
         label11.place(x="865", y="510")
 
         # 디어 에반 핸슨 버튼
@@ -123,7 +125,7 @@ class MovieGUI:
         btn12 = Button(self.root, image=photo12)
         btn12.place(x="1010", y="325")
 
-        label12 = Label(self.root, text="디어 에반 핸슨", bg="white")
+        label12 = Label(self.root, text="디어 에반 핸슨", font=("휴먼편지체", 10), bg="white")
         label12.place(x="1033", y="510")
 
         # 오른쪽 화살표
@@ -154,7 +156,7 @@ class MovieGUI:
         label1 = Label(self.root, font=("휴먼편지체", 40), text="MoCookie", bg="white", fg="black")
         label1.place(x="500", y="5")
 
-        button_search = tkinter.Button(self.root, height=1, width=8, text="나의 리뷰", bg="white", command=self.searchReview)
+        button_search = tkinter.Button(self.root, height=1, width=8, text="나의 리뷰", bg="white", command=self.myReview)
         button_search.place(x=1075, y=30)
 
         # Dune 버튼
@@ -162,7 +164,7 @@ class MovieGUI:
         btn1 = Button(self.root, image=photo1, command=self.dune_GUI)
         btn1.place(x="60", y="100")
 
-        label1 = Label(self.root, text="듄", bg="white")
+        label1 = Label(self.root, text="듄", font=("휴먼편지체", 10), bg="white")
         label1.place(x="115", y="285")
 
         # 유체이탈자 버튼
@@ -170,7 +172,7 @@ class MovieGUI:
         btn2 = Button(self.root, image=photo2)
         btn2.place(x="250", y="100")
 
-        label2 = Label(self.root, text="유체이탈자", bg="white")
+        label2 = Label(self.root, text="유체이탈자", font=("휴먼편지체", 10), bg="white")
         label2.place(x="285", y="285")
 
         # 연애 빠진 로맨스 버튼
@@ -178,7 +180,7 @@ class MovieGUI:
         btn3 = Button(self.root, image=photo3)
         btn3.place(x="440", y="100")
 
-        label3 = Label(self.root, text="연애 빠진 로맨스", bg="white")
+        label3 = Label(self.root, text="연애 빠진 로맨스", font=("휴먼편지체", 10), bg="white")
         label3.place(x="458", y="285")
 
         # 엔칸토-마법의 세계 버튼
@@ -186,7 +188,7 @@ class MovieGUI:
         btn4 = Button(self.root, image=photo4)
         btn4.place(x="630", y="100")
 
-        label4 = Label(self.root, text="엔칸토-마법의 세계", bg="white")
+        label4 = Label(self.root, text="엔칸토-마법의 세계", font=("휴먼편지체", 10), bg="white")
         label4.place(x="640", y="285")
 
         # 이터널스 버튼
@@ -194,7 +196,7 @@ class MovieGUI:
         btn5 = Button(self.root, image=photo5)
         btn5.place(x="820", y="100")
 
-        label5 = Label(self.root, text="이터널스", bg="white")
+        label5 = Label(self.root, text="이터널스", font=("휴먼편지체", 10), bg="white")
         label5.place(x="860", y="285")
 
         # 장르만 로맨스 버튼
@@ -202,7 +204,7 @@ class MovieGUI:
         btn6 = Button(self.root, image=photo6)
         btn6.place(x="1010", y="100")
 
-        label6 = Label(self.root, text="장르만 로맨스", bg="white")
+        label6 = Label(self.root, text="장르만 로맨스", font=("휴먼편지체", 10), bg="white")
         label6.place(x="1035", y="285")
 
         # 프렌치 디스패치 버튼
@@ -210,7 +212,7 @@ class MovieGUI:
         btn7 = Button(self.root, image=photo7)
         btn7.place(x="60", y="325")
 
-        label7 = Label(self.root, text="프렌치 디스패치", bg="white")
+        label7 = Label(self.root, text="프렌치 디스패치", font=("휴먼편지체", 10), bg="white")
         label7.place(x="80", y="510")
 
         # 너에게 가는 길 버튼
@@ -218,7 +220,7 @@ class MovieGUI:
         btn8 = Button(self.root, image=photo8)
         btn8.place(x="250", y="325")
 
-        label8 = Label(self.root, text="너에게 가는 길", bg="white")
+        label8 = Label(self.root, text="너에게 가는 길", font=("휴먼편지체", 10), bg="white")
         label8.place(x="273", y="510")
 
         # 라임 크라임 버튼
@@ -226,7 +228,7 @@ class MovieGUI:
         btn9 = Button(self.root, image=photo9)
         btn9.place(x="440", y="325")
 
-        label9 = Label(self.root, text="라임 크라임", bg="white")
+        label9 = Label(self.root, text="라임 크라임", font=("휴먼편지체", 10), bg="white")
         label9.place(x="473", y="510")
 
         # 애비규환 버튼
@@ -234,7 +236,7 @@ class MovieGUI:
         btn10 = Button(self.root, image=photo10)
         btn10.place(x="630", y="325")
 
-        label10 = Label(self.root, text="애비규환", bg="white")
+        label10 = Label(self.root, text="애비규환", font=("휴먼편지체", 10), bg="white")
         label10.place(x="670", y="510")
 
         # 로그북 버튼
@@ -242,7 +244,7 @@ class MovieGUI:
         btn11 = Button(self.root, image=photo11)
         btn11.place(x="820", y="325")
 
-        label11 = Label(self.root, text="로그북", bg="white")
+        label11 = Label(self.root, text="로그북", font=("휴먼편지체", 10), bg="white")
         label11.place(x="865", y="510")
 
         # 디어 에반 핸슨 버튼
@@ -250,7 +252,7 @@ class MovieGUI:
         btn12 = Button(self.root, image=photo12)
         btn12.place(x="1010", y="325")
 
-        label12 = Label(self.root, text="디어 에반 핸슨", bg="white")
+        label12 = Label(self.root, text="디어 에반 핸슨", font=("휴먼편지체", 10), bg="white")
         label12.place(x="1033", y="510")
 
         # 오른쪽 화살표
@@ -280,7 +282,7 @@ class MovieGUI:
         label1 = Label(self.root, font=("휴먼편지체", 40), text="MoCookie", bg="white", fg="black")
         label1.place(x="500", y="5")
 
-        button_search = tkinter.Button(self.root, height=1, width=8, text="나의 리뷰", bg="white", command=self.searchReview)
+        button_search = tkinter.Button(self.root, height=1, width=8, text="나의 리뷰", bg="white", command=self.myReview)
         button_search.place(x=1075, y=30)
 
         # 호빗: 스마우그의 폐허 버튼
@@ -288,7 +290,7 @@ class MovieGUI:
         btn1 = Button(self.root, image=photo1)
         btn1.place(x="60", y="100")
 
-        label1 = Label(self.root, text="호빗: 스마우그의 폐허", bg="white")
+        label1 = Label(self.root, text="호빗: 스마우그의 폐허", font=("휴먼편지체", 10), bg="white")
         label1.place(x="63", y="285")
 
         # 행복의 속도 버튼
@@ -296,7 +298,7 @@ class MovieGUI:
         btn2 = Button(self.root, image=photo2)
         btn2.place(x="250", y="100")
 
-        label2 = Label(self.root, text="행복의 속도", bg="white")
+        label2 = Label(self.root, text="행복의 속도", font=("휴먼편지체", 10), bg="white")
         label2.place(x="280", y="285")
 
         # 왕십리 김종분 버튼
@@ -304,7 +306,7 @@ class MovieGUI:
         btn3 = Button(self.root, image=photo3)
         btn3.place(x="440", y="100")
 
-        label3 = Label(self.root, text="왕십리 김종분", bg="white")
+        label3 = Label(self.root, text="왕십리 김종분", font=("휴먼편지체", 10), bg="white")
         label3.place(x="465", y="285")
 
         # 귀멸의 칼날 버튼
@@ -312,7 +314,7 @@ class MovieGUI:
         btn4 = Button(self.root, image=photo4)
         btn4.place(x="630", y="100")
 
-        label4 = Label(self.root, text="귀멸의 칼날: 나타구모산 편", bg="white")
+        label4 = Label(self.root, text="귀멸의 칼날: 나타구모산 편", font=("휴먼편지체", 10), bg="white")
         label4.place(x="618", y="285")
 
         # 귀멸의 칼날2 버튼
@@ -320,7 +322,7 @@ class MovieGUI:
         btn5 = Button(self.root, image=photo5)
         btn5.place(x="820", y="100")
 
-        label5 = Label(self.root, text="귀멸의 칼날-남매의 연", bg="white")
+        label5 = Label(self.root, text="귀멸의 칼날-남매의 연", font=("휴먼편지체", 10), bg="white")
         label5.place(x="823", y="285")
 
         # 퍼스트 카우 버튼
@@ -328,7 +330,7 @@ class MovieGUI:
         btn6 = Button(self.root, image=photo6)
         btn6.place(x="1010", y="100")
 
-        label6 = Label(self.root, text="퍼스트 카우", bg="white")
+        label6 = Label(self.root, text="퍼스트 카우", font=("휴먼편지체", 10), bg="white")
         label6.place(x="1040", y="285")
 
         # 메이드 인 이태리 버튼
@@ -336,7 +338,7 @@ class MovieGUI:
         btn7 = Button(self.root, image=photo7)
         btn7.place(x="60", y="325")
 
-        label7 = Label(self.root, text="메이드 인 이태리", bg="white")
+        label7 = Label(self.root, text="메이드 인 이태리", font=("휴먼편지체", 10), bg="white")
         label7.place(x="78", y="510")
 
         # 1984 최동원 버튼
@@ -344,7 +346,7 @@ class MovieGUI:
         btn8 = Button(self.root, image=photo8)
         btn8.place(x="250", y="325")
 
-        label8 = Label(self.root, text="1984 최동원", bg="white")
+        label8 = Label(self.root, text="1984 최동원", font=("휴먼편지체", 10), bg="white")
         label8.place(x="275", y="510")
 
         # 휴가 버튼
@@ -352,7 +354,7 @@ class MovieGUI:
         btn9 = Button(self.root, image=photo9)
         btn9.place(x="440", y="325")
 
-        label9 = Label(self.root, text="휴가", bg="white")
+        label9 = Label(self.root, text="휴가", font=("휴먼편지체", 10), bg="white")
         label9.place(x="490", y="510")
 
         # 러브 어페어 버튼
@@ -360,7 +362,7 @@ class MovieGUI:
         btn10 = Button(self.root, image=photo10)
         btn10.place(x="630", y="325")
 
-        label10 = Label(self.root, text="러브 어페어-우리가 말하는 것,\n 우리가 하는 것", bg="white")
+        label10 = Label(self.root, text="러브 어페어-우리가 말하는 것,\n 우리가 하는 것", font=("휴먼편지체", 10), bg="white")
         label10.place(x="613", y="510")
 
         # 꽃다발 같은 사랑을 했다 버튼
@@ -368,7 +370,7 @@ class MovieGUI:
         btn11 = Button(self.root, image=photo11)
         btn11.place(x="820", y="325")
 
-        label11 = Label(self.root, text="꽃다발 같은 사랑을 했다", bg="white")
+        label11 = Label(self.root, text="꽃다발 같은 사랑을 했다", font=("휴먼편지체", 10), bg="white")
         label11.place(x="818", y="510")
 
         # 너의 이름은 버튼
@@ -376,7 +378,7 @@ class MovieGUI:
         btn12 = Button(self.root, image=photo12)
         btn12.place(x="1010", y="325")
 
-        label12 = Label(self.root, text="너의 이름은", bg="white")
+        label12 = Label(self.root, text="너의 이름은", font=("휴먼편지체", 10), bg="white")
         label12.place(x="1040", y="510")
 
         # 오른쪽 화살표
@@ -456,12 +458,12 @@ class MovieGUI:
             self.duneroot.geometry('600x600+340+20')
             self.duneroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
 
-            frame = Frame(self.duneroot)
-            frame.pack()
+            # frame = Frame(self.duneroot)
+            # frame.pack()
 
             f = open("MovieReview/DuneReview.txt", 'r', encoding="UTF-8")
             text = f.read()
-            label = tkinter.Label(frame, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label = tkinter.Label(self.duneroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
             label.pack()
 
             # 버튼 출력
@@ -482,13 +484,27 @@ class MovieGUI:
             self.duneroot.geometry('600x600+340+20')
             self.duneroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
 
-            frame = Frame(self.duneroot)
-            frame.pack()
+            # frame = Frame(self.duneroot)
+            # frame.pack()
 
             f = open("MovieReview/DuneSpoReview.txt", 'r', encoding="UTF-8")
             text = f.read()
-            label = tkinter.Label(frame, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label = tkinter.Label(self.duneroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
             label.pack()
+            fr = open('MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '듄':
+                    tmp += 20
+                    label = Label(self.duneroot, text=f'- {a[3]}', bg='white')
+                    label.place(x=60, y=550 + tmp)
 
             # 버튼 출력
             button1 = Button(self.duneroot, text="리뷰 작성", bg="white", command=self.writeReview)
@@ -500,164 +516,85 @@ class MovieGUI:
         # 실행
         self.duneroot.mainloop()
 
-    # def Sporeview(self):
-    #     self.rootreview = tkinter.Toplevel()  # 창 생성
-    #     self.rootreview.title('MoCookie')  # 창 제목
-    #     self.rootreview.geometry('600x600+340+20')
-    #     self.rootreview.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
-    #     self.rootreview.configure(bg="white")
-    #
-    #
-    #
-    #     # 버튼 출력
-    #     button1 = Button(self.rootreview, text="!!!!!", fg="red", bg="blue", command=self.writeReview)  # 버튼 1 변수에 버튼 생성, 커맨드(클릭시)=clickButton 함수 호출
-    #     button1.pack(expand=1)  # button1.채워넣기(확장두께=1)
-    #
-    #     # 버튼 출력
-    #     button1 = Button(self.rootreview, text="CLICK", fg="red", bg="blue", command=self.fbutton)  # 버튼 1 변수에 버튼 생성, 커맨드(클릭시)=clickButton 함수 호출
-    #     button1.pack(expand=1)  # button1.채워넣기(확장두께=1)
-    #
-    #     # 실행
-    #     self.rootreview.mainloop()
-
     def writeReview(self):
-        # main 화면 이미지 이미지를 덮는거임
-        self.duneroot.mainBack = tkinter.PhotoImage(file="Img/img_7.png")
-        self.duneroot.mainBackL = tkinter.Label(self.duneroot, image=self.duneroot.mainBack)
-        self.duneroot.mainBackL.place(x=-2, y=-2)
+        self.writereview = tkinter.Toplevel()  # 창 생성
+        self.writereview.title('MoCookie')  # 창 제목
+        self.writereview.geometry('600x600+340+20')
+        self.writereview.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.writereview.configure(bg="white")
 
-        self.duneroot.title('MoCookie')  # 창 제목
-        self.duneroot.geometry('600x600+340+20')
-        self.duneroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
-
-        label1 = Label(self.duneroot, text="리뷰 작성", bg="white",font=("휴먼편지체", 23))
+        label1 = Label(self.writereview, text="리뷰 작성", bg="white",font=("휴먼편지체", 23))
         label1.place(x=240, y=15)
         str = StringVar()
-        self.entry1 = Entry(self.duneroot, width=20, font=("휴먼편지체", 10), textvariable=str)  # 이름 입력
+        self.entry1 = Entry(self.writereview, width=20, font=("휴먼편지체", 10), textvariable=str)  # 이름 입력
         self.entry1.place(x=230, y=80)
         a = ["듄", "유체이탈자", "연애 빠진 로맨스", "엔칸토-마법의 세계", "이터널스", "장르만 로맨스", "프렌치 디스패치", "너에게 가는 길", "라임 크라임", "애비규환", "로그북",
              "디어 에반 핸슨", "호빗: 스마우그의 폐허", "행복의 속도", "왕십리 김종분", "귀멸의 칼날: 나타구모산 편", "귀멸의 칼날-남매의 연", "퍼스트 카우", "메이드 인 이태리", "1984 최동원", "휴가", "러브 어페어", "꽃다발 같은 사랑을 했다", "너의 이름은"]  # 콤보 박스
-        self.combo1 = ttk.Combobox(self.duneroot)
+        self.combo1 = ttk.Combobox(self.writereview)
         self.combo1.config(height=5, width=30)  # 높이 설정
         self.combo1.config(values=a, font=("휴먼편지체", 10))  # 나타낼 항목 리스트(a) 설정
         self.combo1.config(state="readonly", font=("휴먼편지체", 10))  # 콤보 박스에 사용자가 직접 입력 불가
         self.combo1.set("※리뷰를 남길 영화를 선택해주세요※")  # 맨 처음 나타낼 값 설정
         self.combo1.place(x=190, y=115)
-        self.text15 = Text(self.duneroot, height="20", font=("휴먼편지체", 10))  # 리뷰 작성
+        self.text15 = Text(self.writereview, height="20", font=("휴먼편지체", 10))  # 리뷰 작성
         self.text15.place(x=55, y=160)
         # 체크 박스
         self.CheckVar2 = IntVar()
-        self.c2 = Checkbutton(self.duneroot, text="스포포함", variable=self.CheckVar2, font=("휴먼편지체", 13), bg="white")
+        self.c2 = Checkbutton(self.writereview, text="스포포함", variable=self.CheckVar2, font=("휴먼편지체", 13), bg="white")
         self.c2.place(x="260", y="470")
-        button_sa = tkinter.Button(self.duneroot, height=1, width=8, text="리뷰 저장", font=("휴먼편지체", 10), command=self.add_review)
+        button_sa = tkinter.Button(self.writereview, height=1, width=8, text="리뷰 저장", font=("휴먼편지체", 10), command=self.add_review)
         button_sa.place(x=260, y=500)
 
         # 실행
         self.duneroot.mainloop()
 
-    # def spoReviewSaved(self, text): #파일 저장하는 함수
-    #     f = open('spoilerReview.txt','a')
-    #     f.write(text+"\n")
-    #     messagebox.showwarning('저장완료', '저장되었습니다') #메세지 박스 출력
-    #     self.window.destroy() #화면 창 끄기
-    #
-    # def ReviewSaved(self, text): #파일 저장하는 함수
-    #     f = open('Review.txt','a')
-    #     f.write(text+"\n")
-    #     messagebox.showwarning('저장완료', '저장되었습니다') #메세지 박스 출력
-    #     self.window.destroy() #화면 창 끄기
+    def add_review(self):
+        # 리뷰 딕셔너리로 MyReview.txt에 저장
+        self.reviews = list()
+        print(self.CheckVar.get())
+        self.new_review = f'{self.entry1.get()}\t{self.combo1.get()}\t{self.CheckVar2.get()}\t{self.text15.get("0.1", "end")}'
 
-    # def mychart(self): #명대사 저장하기 위해 입력하는 창
-    #         self.window = tkinter.Toplevel()
-    #         self.window.geometry("800x400")
-    #
-    #         label1 = Label(self.window, text = "인상 깊게 본 명대사를 써주세요!")
-    #         str = StringVar()
-    #         self.entry1 = Entry(self.window, width=20, textvariable=str)
-    #         label1.pack()
-    #         self.entry1.pack()
-    #         self.text15 = Text(self.window, height="10")
-    #         self.text15.pack()
-    #         a = ["Python", "JAVA", "C"]  # 콤보 박스에 나타낼 항목 리스트
-    #         self.combo1 = ttk.Combobox(self.window)  # root라는 창에 콤보박스 생성
-    #         self.combo1.config(height=5)  # 높이 설정
-    #         self.combo1.config(values=a)  # 나타낼 항목 리스트(a) 설정
-    #         self.combo1.config(state="readonly")  # 콤보 박스에 사용자가 직접 입력 불가
-    #         self.combo1.set("골라 골라")  # 맨 처음 나타낼 값 설정
-    #         self.combo1.pack()
-    #         button_sa = tkinter.Button(self.window, height=6, width=10, text="저장", command=self.add_review)
-    #         button_sa.pack()
-    #         button_search = tkinter.Button(self.window, height=6, width=10, text="저장", command=self.searchReview)
-    #         button_search.pack()
-    #         self.window.mainloop()
+        self.reviews.append(self.new_review)
 
-    # def fbutton(self):  # 작성한 파일 불러오는 함수
-    #
-    #     # 스크롤
-    #     # frame = Frame(self.root)
-    #     # frame.grid(column=0, row=0)
-    #     #
-    #     # scrollbar = Scrollbar(frame)
-    #     # scrollbar.pack(side="right", fill="both")
-    #     #
-    #     # list = Listbox(frame, yscrollcommand = scrollbar.set)
-    #     # for line in range(30):
-    #     #     list.insert(END, "Line No" + str(line))
-    #     #
-    #     # list.pack(side="left", fill="both")
-    #     # scrollbar.config(command=list.yview)
-    #     #
-    #     # mainloop()
-    #
-    #     self.window2 = tkinter.Toplevel()
-    #     self.window2.geometry("600x600")
-    #
-    #     frame = Frame(self.window2)
-    #     frame.pack()
-    #
-    #     f = open("MovieReview/DuneReview.txt", 'r', encoding="UTF-8")
-    #     text = f.read()
-    #     label = tkinter.Label(frame, width=600, height=600, font=("휴먼편지체", 10), text=text)
-    #     label.pack(side='left', fill="y")
-    #
-    #     #
-    #     # # listNodes = Listbox(frame, width=600, height=600, font=("휴먼편지체", 10))
-    #     # # listNodes.pack(side='left', fill="y")
-    #     #
-    #     # scrollbar = Scrollbar(frame, orient="vertical")
-    #     # scrollbar.config(command=label.yview)
-    #     # scrollbar.pack(side="right", fill="y")
-    #     #
-    #     # label.config(yscrollcommand=scrollbar.set)
-    #
-    #     # for x in range(100):
-    #     #     label.insert(END, str(x))
+        with open('MyReview.txt', 'a', encoding='utf-8') as fw:
+            fw.write(self.new_review)
+
+
+        if self.entry1.get() == '':
+            messagebox.showwarning('다시시도', '작성자 명을 입력해 주세요.')  # 메세지 박스 출력
+            self.writereview.destroy()  # 화면 창 끄기
+            self.writeReview()
+        elif self.combo1.get() == "※리뷰를 남길 영화를 선택해주세요※":
+            messagebox.showwarning('다시시도', '영화를 선택해주세요.')  # 메세지 박스 출력
+            self.writereview.destroy()  # 화면 창 끄기
+            self.writeReview()
+        elif self.text15.get() == "":
+            messagebox.showwarning('다시시도', '리뷰를 입력해주세요.')  # 메세지 박스 출력
+            self.writereview.destroy()  # 화면 창 끄기
+            self.writeReview()
+        else :
+            messagebox.showwarning('저장완료', '저장되었습니다.')  # 메세지 박스 출력
+            self.writereview.destroy()  # 화면 창 끄기
+
 
     def myReview(self):
         self.myreview = tkinter.Toplevel()  # 창 생성
         self.myreview.title('MoCookie')  # 창 제목
         self.myreview.geometry('600x600+340+20')
         self.myreview.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
-        self.myreview.configure(bg="cadetblue")
+        self.myreview.configure(bg="white")
 
-        with open('MyReview.txt', 'rb') as fr:
-            review_loaded = pickle.load(fr)
-            label = tkinter.Label(self.myreview, text=review_loaded)
-            label.pack()
-
-    def add_review(self):
-        # 리뷰 딕셔너리로 MyReview.txt에 저장
-        self.reviews = []
-        print(self.CheckVar.get())
-        self.new_review = {'이름': self.entry1.get(), '영화 제목': self.combo1.get(), '스포 여부(0은 X, 1은 O)' : self.CheckVar2.get(), '리뷰': self.text15.get("0.1", "end")}
-
-        self.reviews.append(self.new_review)
-
-        with open('MyReview.txt', 'wb') as fw:
-            pickle.dump(self.reviews, fw)
-
-        messagebox.showwarning('저장완료', '저장되었습니다.')  # 메세지 박스 출력
-        self.duneroot.destroy()  # 화면 창 끄기
+        label1 = Label(self.myreview, text="나의 리뷰", bg="white", font=("휴먼편지체", 23))
+        label1.place(x=240, y=15)
+        fr = open('MyReview.txt', 'r', encoding='utf-8')
+        tmp = 0
+        while True:
+            review_loaded = fr.readline()
+            if not review_loaded: break
+            tmp += 20
+            label = Label(self.myreview, text=review_loaded, bg='white')
+            # label = tkinter.Label(self.myreview, text=review_loaded, bg="white")
+            label.place(x=60, y=100+tmp)
 
     # def searchReview(self):
     #     self.window5 = tkinter.Toplevel()
