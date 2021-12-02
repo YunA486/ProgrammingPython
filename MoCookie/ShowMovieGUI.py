@@ -159,7 +159,7 @@ class MovieGUI:
         label1 = Label(self.root, font=("휴먼편지체", 40), text="MoCookie", bg="white", fg="black")
         label1.place(x="500", y="5")
 
-        button_search = tkinter.Button(self.root, height=1, width=8, text="나의 리뷰", bg="white", command=self.myReview)
+        button_search = tkinter.Button(self.root, height=1, width=8, text="나의 리뷰", bg="white", font=("휴먼편지체", 10), command=self.myReview)
         button_search.place(x=1075, y=30)
 
         button_search = tkinter.Button(self.root, height=1, width=8, text="리뷰 작성", bg="white", font=("휴먼편지체", 10),
@@ -289,7 +289,7 @@ class MovieGUI:
         label1 = Label(self.root, font=("휴먼편지체", 40), text="MoCookie", bg="white", fg="black")
         label1.place(x="500", y="5")
 
-        button_search = tkinter.Button(self.root, height=1, width=8, text="나의 리뷰", bg="white", command=self.myReview)
+        button_search = tkinter.Button(self.root, height=1, width=8, text="나의 리뷰", bg="white",  font=("휴먼편지체", 10),command=self.myReview)
         button_search.place(x=1075, y=30)
 
         button_search = tkinter.Button(self.root, height=1, width=8, text="리뷰 작성", bg="white", font=("휴먼편지체", 10),
@@ -298,23 +298,23 @@ class MovieGUI:
 
         # 꽃다발 같은 사랑을 했다 버튼
         photo1 = PhotoImage(file="MoviePoster/Bouquet.png")
-        btn1 = Button(self.root, image=photo1)
+        btn1 = Button(self.root, image=photo1, command=self.Bouquet_GUI)
         btn1.place(x="60", y="100")
 
-        label11 = Label(self.root, text="꽃다발 같은 사랑을 했다", font=("휴먼편지체", 10), bg="white")
-        label11.place(x="61", y="285")
+        label1 = Label(self.root, text="꽃다발 같은 사랑을 했다", font=("휴먼편지체", 10), bg="white")
+        label1.place(x="61", y="285")
 
-        # 행복의 속도 버튼
-        photo2 = PhotoImage(file="MoviePoster/SpeedOfHappiness.png")
-        btn2 = Button(self.root, image=photo2)
+        # 너의 이름은 버튼
+        photo2 = PhotoImage(file="MoviePoster/YourName.png")
+        btn2 = Button(self.root, image=photo2, command=self.YourName_GUI)
         btn2.place(x="250", y="100")
 
-        label2 = Label(self.root, text="행복의 속도", font=("휴먼편지체", 10), bg="white")
+        label2 = Label(self.root, text="너의 이름은", font=("휴먼편지체", 10), bg="white")
         label2.place(x="280", y="285")
 
         # 왕십리 김종분 버튼
         photo3 = PhotoImage(file="MoviePoster/Wangsimni.png")
-        btn3 = Button(self.root, image=photo3)
+        btn3 = Button(self.root, image=photo3, command=self.Kim_GUI)
         btn3.place(x="440", y="100")
 
         label3 = Label(self.root, text="왕십리 김종분", font=("휴먼편지체", 10), bg="white")
@@ -322,7 +322,7 @@ class MovieGUI:
 
         # 귀멸의 칼날 버튼
         photo4 = PhotoImage(file="MoviePoster/DemonSlayer.png")
-        btn4 = Button(self.root, image=photo4)
+        btn4 = Button(self.root, image=photo4, command=self.Natagumo_GUI)
         btn4.place(x="630", y="100")
 
         label4 = Label(self.root, text="귀멸의 칼날: 나타구모산 편", font=("휴먼편지체", 10), bg="white")
@@ -330,7 +330,7 @@ class MovieGUI:
 
         # 귀멸의 칼날2 버튼
         photo5 = PhotoImage(file="MoviePoster/DemonSlayer2.png")
-        btn5 = Button(self.root, image=photo5)
+        btn5 = Button(self.root, image=photo5, command=self.Nammae_GUI)
         btn5.place(x="820", y="100")
 
         label5 = Label(self.root, text="귀멸의 칼날-남매의 연", font=("휴먼편지체", 10), bg="white")
@@ -338,7 +338,7 @@ class MovieGUI:
 
         # 퍼스트 카우 버튼
         photo6 = PhotoImage(file="MoviePoster/FirstCow.png")
-        btn6 = Button(self.root, image=photo6)
+        btn6 = Button(self.root, image=photo6, command=self.FirstCow_GUI)
         btn6.place(x="1010", y="100")
 
         label6 = Label(self.root, text="퍼스트 카우", font=("휴먼편지체", 10), bg="white")
@@ -346,7 +346,7 @@ class MovieGUI:
 
         # 메이드 인 이태리 버튼
         photo7 = PhotoImage(file="MoviePoster/MadeInItaly.png")
-        btn7 = Button(self.root, image=photo7)
+        btn7 = Button(self.root, image=photo7, command=self.Italy_GUI)
         btn7.place(x="60", y="325")
 
         label7 = Label(self.root, text="메이드 인 이태리", font=("휴먼편지체", 10), bg="white")
@@ -354,7 +354,7 @@ class MovieGUI:
 
         # 1984 최동원 버튼
         photo8 = PhotoImage(file="MoviePoster/ChoiDongWon.png")
-        btn8 = Button(self.root, image=photo8)
+        btn8 = Button(self.root, image=photo8, command=self.Choi_GUI)
         btn8.place(x="250", y="325")
 
         label8 = Label(self.root, text="1984 최동원", font=("휴먼편지체", 10), bg="white")
@@ -362,19 +362,11 @@ class MovieGUI:
 
         # 휴가 버튼
         photo9 = PhotoImage(file="MoviePoster/ALeave.png")
-        btn9 = Button(self.root, image=photo9)
+        btn9 = Button(self.root, image=photo9, command=self.Leave_GUI)
         btn9.place(x="440", y="325")
 
         label9 = Label(self.root, text="휴가", font=("휴먼편지체", 10), bg="white")
         label9.place(x="490", y="510")
-
-        # 너의 이름은 버튼
-        photo10 = PhotoImage(file="MoviePoster/YourName.png")
-        btn10 = Button(self.root, image=photo10)
-        btn10.place(x="630", y="325")
-
-        label10 = Label(self.root, text="너의 이름은", font=("휴먼편지체", 10), bg="white")
-        label10.place(x="663", y="510")
 
         # 오른쪽 화살표
         photo13 = PhotoImage(file="Img/Right.png")
@@ -2085,6 +2077,1307 @@ class MovieGUI:
         # 실행
         self.Hobitroot.mainloop()
     # ---------------------------------------------------------------------------------------------------
+    def Bouquet_GUI(self):
+        self.Bouquetroot = tkinter.Toplevel()  # 창 생성
+        self.Bouquetroot.title('MoCookie')  # 창 제목
+        self.Bouquetroot.geometry('600x600+340+20')
+        self.Bouquetroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.Bouquetroot.configure(bg="white")
+
+        self.Bouquetroot.label2 = Label(self.Bouquetroot, font=("휴먼편지체", 25), text="We Made a Beautiful Bouquet",
+                                        bg="white",
+                                        fg="lightpink")
+        self.Bouquetroot.label2.place(x="10", y="10")
+
+        self.Bouquetroot.image = tkinter.PhotoImage(file="../MoCookie/Poster/BouquetPoster.png")
+        self.Bouquetroot.label = tkinter.Label(self.Bouquetroot, image=self.Bouquetroot.image,
+                                               bg="white")
+        self.Bouquetroot.label.place(x="195", y="55")
+
+        self.Bouquetroot.label1 = Label(self.Bouquetroot, font=("휴먼편지체", 17), text="쿠키 영상 없음", bg="white")
+        self.Bouquetroot.label1.place(x="233", y="360")
+
+        self.Bouquetroot.label2 = Label(self.Bouquetroot, font=("휴먼편지체", 12), text="개봉일 : 2013.07.14",
+                                        bg="white")
+        self.Bouquetroot.label2.place(x="234", y="395")
+
+        self.Bouquetroot.label3 = Label(self.Bouquetroot, font=("휴먼편지체", 12), text="장르 : 멜로/로맨스",
+                                        bg="white")
+        self.Bouquetroot.label3.place(x="243", y="415")
+
+        self.Bouquetroot.label3 = Label(self.Bouquetroot, font=("휴먼편지체", 12), text="등급 : 12세이상 관람가",
+                                        bg="white")
+        self.Bouquetroot.label3.place(x="230", y="435")
+
+        self.Bouquetroot.label3 = Label(self.Bouquetroot, font=("휴먼편지체", 12), text="러닝타임 : 123분", bg="white")
+        self.Bouquetroot.label3.place(x="241", y="455")
+
+        self.Bouquetroot.label3 = Label(self.Bouquetroot, font=("휴먼편지체", 12),
+                                        text="추천 좌석 : G~H, 1~4 or 11~14", bg="white")
+        self.Bouquetroot.label3.place(x="203", y="475")
+
+        # 체크 박스
+        self.CheckVar = IntVar()
+
+        c1 = Checkbutton(self.Bouquetroot, text="스포리뷰", variable=self.CheckVar, font=("휴먼편지체", 10), bg="white")
+        c1.place(x="270", y="500")
+
+        button1 = Button(self.Bouquetroot, text="예매하기", font=("휴먼편지체", 11), bg="lightpink",
+                         command=self.BouquetUrl)
+        button1.place(x="230", y="530")
+
+        button1 = Button(self.Bouquetroot, text="리뷰 보기", font=("휴먼편지체", 11), bg="lightpink",
+                         command=self.Bouquetreview)
+        button1.place(x="310", y="530")
+
+        # 실행
+        self.Bouquetroot.mainloop()
+
+    def BouquetUrl(self):  # 영화 티켓 구매 웹사이트로 이동하는 함수
+        url = 'https://movie.yes24.com/Movie/Ticket?gId=M000124288'
+        webbrowser.open_new(url)
+
+    def Bouquetreview(self):
+        # 체크 안했을 때 -> 스포 없는 리뷰 보여주기
+        if self.CheckVar.get() == 0:
+
+            # main 화면 이미지 이미지를 덮는거임
+            self.Bouquetroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Bouquetroot.mainBackL = tkinter.Label(self.Bouquetroot,
+                                                       image=self.Bouquetroot.mainBack)
+            self.Bouquetroot.mainBackL.place(x=-2, y=-2)
+
+            self.Bouquetroot.title('MoCookie')  # 창 제목
+            self.Bouquetroot.geometry('600x600+340+20')
+            self.Bouquetroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            f = open("../MoCookie/MovieReview/BouquetReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Bouquetroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '꽃다발 같은 사랑을 했다':
+                    tmp += 20
+                    label = Label(self.Bouquetroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=460 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Bouquetroot, text="리뷰 작성", bg="lightpink", command=self.writeReview)
+            button1.place(x="520", y="25")  # button1.채워넣기(확장두께=1)
+
+            self.Bouquetroot.label2 = Label(self.Bouquetroot, font=("휴먼편지체", 25), text="We Made a Beautiful Bouquet",
+                                            bg="white", fg="lightpink")
+            self.Bouquetroot.label2.place(x="10", y="10")
+
+        # 체크박스 체크 했을 떄 -> 스포 있는 리뷰
+        else:
+            # main 화면 이미지 이미지를 덮는거임
+            self.Bouquetroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Bouquetroot.mainBackL = tkinter.Label(self.Bouquetroot,
+                                                       image=self.Bouquetroot.mainBack)
+            self.Bouquetroot.mainBackL.place(x=-2, y=-2)
+
+            self.Bouquetroot.title('MoCookie')  # 창 제목
+            self.Bouquetroot.geometry('600x600+340+20')
+            self.Bouquetroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            # frame = Frame(self.duneroot)
+            # frame.pack()
+
+            f = open("../MoCookie/MovieReview/BouquetSpoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Bouquetroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '꽃다발 같은 사랑을 했다':
+                    tmp += 20
+                    label = Label(self.Bouquetroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=325 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Bouquetroot, text="리뷰 작성", bg="lightpink", command=self.writeReview)
+            button1.place(x="520", y="25")
+            self.Bouquetroot.label2 = Label(self.Bouquetroot, font=("휴먼편지체", 25), text="We Made a Beautiful Bouquet",
+                                            bg="white", fg="lightpink")
+            self.Bouquetroot.label2.place(x="10", y="10")
+
+        # 실행
+        self.Bouquetroot.mainloop()
+    # ---------------------------------------------------------------------------------------------------
+    def YourName_GUI(self):
+        self.YourNameroot = tkinter.Toplevel()  # 창 생성
+        self.YourNameroot.title('MoCookie')  # 창 제목
+        self.YourNameroot.geometry('600x600+340+20')
+        self.YourNameroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.YourNameroot.configure(bg="white")
+
+        self.YourNameroot.label2 = Label(self.YourNameroot, font=("휴먼편지체", 28), text="YourName",
+                                         bg="white",
+                                         fg="deepskyblue")
+        self.YourNameroot.label2.place(x="10", y="10")
+
+        self.YourNameroot.image = tkinter.PhotoImage(file="../MoCookie/Poster/YourNamePoster.png")
+        self.YourNameroot.label = tkinter.Label(self.YourNameroot, image=self.YourNameroot.image,
+                                                bg="white")
+        self.YourNameroot.label.place(x="195", y="55")
+
+        self.YourNameroot.label1 = Label(self.YourNameroot, font=("휴먼편지체", 17), text="쿠키 영상 없음", bg="white")
+        self.YourNameroot.label1.place(x="233", y="360")
+
+        self.YourNameroot.label2 = Label(self.YourNameroot, font=("휴먼편지체", 12), text="개봉일 : 2021.08.08",
+                                         bg="white")
+        self.YourNameroot.label2.place(x="234", y="395")
+
+        self.YourNameroot.label3 = Label(self.YourNameroot, font=("휴먼편지체", 12), text="장르 : 애니메이션",
+                                         bg="white")
+        self.YourNameroot.label3.place(x="240", y="415")
+
+        self.YourNameroot.label3 = Label(self.YourNameroot, font=("휴먼편지체", 12), text="등급 : 12세이상 관람가",
+                                         bg="white")
+        self.YourNameroot.label3.place(x="230", y="435")
+
+        self.YourNameroot.label3 = Label(self.YourNameroot, font=("휴먼편지체", 12), text="러닝타임 : 106분", bg="white")
+        self.YourNameroot.label3.place(x="241", y="455")
+
+        self.YourNameroot.label3 = Label(self.YourNameroot, font=("휴먼편지체", 12),
+                                         text="추천 좌석 : D~G, 3~6 or 9~12", bg="white")
+        self.YourNameroot.label3.place(x="203", y="475")
+
+        # 체크 박스
+        self.CheckVar = IntVar()
+
+        c1 = Checkbutton(self.YourNameroot, text="스포리뷰", variable=self.CheckVar, font=("휴먼편지체", 10), bg="white")
+        c1.place(x="270", y="500")
+
+        button1 = Button(self.YourNameroot, text="예매하기", font=("휴먼편지체", 11), bg="deepskyblue",
+                         command=self.YourNameUrl)
+        button1.place(x="230", y="530")
+
+        button1 = Button(self.YourNameroot, text="리뷰 보기", font=("휴먼편지체", 11), bg="deepskyblue",
+                         command=self.YourNamereview)
+        button1.place(x="310", y="530")
+
+        # 실행
+        self.YourNameroot.mainloop()
+
+    def YourNameUrl(self):  # 영화 티켓 구매 웹사이트로 이동하는 함수
+        url = 'https://movie.yes24.com/Movie/Ticket?gId=M000061933'
+        webbrowser.open_new(url)
+
+    def YourNamereview(self):
+        # 체크 안했을 때 -> 스포 없는 리뷰 보여주기
+        if self.CheckVar.get() == 0:
+
+            # main 화면 이미지 이미지를 덮는거임
+            self.YourNameroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.YourNameroot.mainBackL = tkinter.Label(self.YourNameroot,
+                                                        image=self.YourNameroot.mainBack)
+            self.YourNameroot.mainBackL.place(x=-2, y=-2)
+
+            self.YourNameroot.title('MoCookie')  # 창 제목
+            self.YourNameroot.geometry('600x600+340+20')
+            self.YourNameroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            f = open("../MoCookie/MovieReview/YourNameReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.YourNameroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '너의 이름은':
+                    tmp += 20
+                    label = Label(self.YourNameroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=505 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.YourNameroot, text="리뷰 작성", bg="deepskyblue", command=self.writeReview)
+            button1.place(x="520", y="25")  # button1.채워넣기(확장두께=1)
+
+            self.YourNameroot.label2 = Label(self.YourNameroot, font=("휴먼편지체", 28), text="YourName",
+                                             bg="white", fg="deepskyblue")
+            self.YourNameroot.label2.place(x="10", y="10")
+
+        # 체크박스 체크 했을 떄 -> 스포 있는 리뷰
+        else:
+            # main 화면 이미지 이미지를 덮는거임
+            self.YourNameroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.YourNameroot.mainBackL = tkinter.Label(self.YourNameroot,
+                                                        image=self.YourNameroot.mainBack)
+            self.YourNameroot.mainBackL.place(x=-2, y=-2)
+
+            self.YourNameroot.title('MoCookie')  # 창 제목
+            self.YourNameroot.geometry('600x600+340+20')
+            self.YourNameroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            # frame = Frame(self.duneroot)
+            # frame.pack()
+
+            f = open("../MoCookie/MovieReview/YourNameSpoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.YourNameroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '너의 이름은':
+                    tmp += 20
+                    label = Label(self.YourNameroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=380 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.YourNameroot, text="리뷰 작성", bg="deepskyblue", command=self.writeReview)
+            button1.place(x="520", y="25")
+            self.YourNameroot.label2 = Label(self.YourNameroot, font=("휴먼편지체", 28), text="YourName",
+                                             bg="white", fg="deepskyblue")
+            self.YourNameroot.label2.place(x="10", y="10")
+
+        # 실행
+        self.YourNameroot.mainloop()
+    # ---------------------------------------------------------------------------------------------------
+    def Kim_GUI(self):
+        self.Kimroot = tkinter.Toplevel()  # 창 생성
+        self.Kimroot.title('MoCookie')  # 창 제목
+        self.Kimroot.geometry('600x600+340+20')
+        self.Kimroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.Kimroot.configure(bg="white")
+
+        self.Kimroot.label2 = Label(self.Kimroot, font=("휴먼편지체", 25), text="Kim Jong-boon of Wangshimni", bg="white",
+                                    fg="forestgreen")
+        self.Kimroot.label2.place(x="10", y="10")
+
+        self.Kimroot.image = tkinter.PhotoImage(file="../MoCookie/Poster/KimPoster.png")
+        self.Kimroot.label = tkinter.Label(self.Kimroot, image=self.Kimroot.image,
+                                           bg="white")
+        self.Kimroot.label.place(x="195", y="55")
+
+        self.Kimroot.label1 = Label(self.Kimroot, font=("휴먼편지체", 17), text="쿠키 영상 없음", bg="white")
+        self.Kimroot.label1.place(x="233", y="360")
+
+        self.Kimroot.label2 = Label(self.Kimroot, font=("휴먼편지체", 12), text="개봉일 : 2021.11.11",
+                                    bg="white")
+        self.Kimroot.label2.place(x="234", y="395")
+
+        self.Kimroot.label3 = Label(self.Kimroot, font=("휴먼편지체", 12), text="장르 : 다큐멘터리",
+                                    bg="white")
+        self.Kimroot.label3.place(x="243", y="415")
+
+        self.Kimroot.label3 = Label(self.Kimroot, font=("휴먼편지체", 12), text="등급 : 15세이상 관람가",
+                                    bg="white")
+        self.Kimroot.label3.place(x="230", y="435")
+
+        self.Kimroot.label3 = Label(self.Kimroot, font=("휴먼편지체", 12), text="러닝타임 : 103분", bg="white")
+        self.Kimroot.label3.place(x="241", y="455")
+
+        self.Kimroot.label3 = Label(self.Kimroot, font=("휴먼편지체", 12),
+                                    text="추천 좌석 : F~G, 6~9", bg="white")
+        self.Kimroot.label3.place(x="233", y="475")
+
+        # 체크 박스
+        self.CheckVar = IntVar()
+
+        c1 = Checkbutton(self.Kimroot, text="스포리뷰", variable=self.CheckVar, font=("휴먼편지체", 10), bg="white")
+        c1.place(x="270", y="500")
+
+        button1 = Button(self.Kimroot, text="예매하기", font=("휴먼편지체", 11), bg="forestgreen",
+                         command=self.KimUrl)
+        button1.place(x="230", y="530")
+
+        button1 = Button(self.Kimroot, text="리뷰 보기", font=("휴먼편지체", 11), bg="forestgreen",
+                         command=self.Kimreview)
+        button1.place(x="310", y="530")
+
+        # 실행
+        self.Kimroot.mainloop()
+
+    def KimUrl(self):  # 영화 티켓 구매 웹사이트로 이동하는 함수
+        url = 'https://movie.yes24.com/Movie/Ticket?gId=M000125633'
+        webbrowser.open_new(url)
+
+    def Kimreview(self):
+        # 체크 안했을 때 -> 스포 없는 리뷰 보여주기
+        if self.CheckVar.get() == 0:
+
+            # main 화면 이미지 이미지를 덮는거임
+            self.Kimroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Kimroot.mainBackL = tkinter.Label(self.Kimroot,
+                                                   image=self.Kimroot.mainBack)
+            self.Kimroot.mainBackL.place(x=-2, y=-2)
+
+            self.Kimroot.title('MoCookie')  # 창 제목
+            self.Kimroot.geometry('600x600+340+20')
+            self.Kimroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            f = open("../MoCookie/MovieReview/KimReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Kimroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '왕십리 김종분':
+                    tmp += 20
+                    label = Label(self.Kimroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=330 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Kimroot, text="리뷰 작성", bg="forestgreen", command=self.writeReview)
+            button1.place(x="520", y="25")  # button1.채워넣기(확장두께=1)
+
+            self.Kimroot.label2 = Label(self.Kimroot, font=("휴먼편지체", 25), text="Kim Jong-boon of Wangshimni",
+                                        bg="white", fg="forestgreen")
+            self.Kimroot.label2.place(x="10", y="10")
+
+        # 체크박스 체크 했을 떄 -> 스포 있는 리뷰
+        else:
+            # main 화면 이미지 이미지를 덮는거임
+            self.Kimroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Kimroot.mainBackL = tkinter.Label(self.Kimroot,
+                                                   image=self.Kimroot.mainBack)
+            self.Kimroot.mainBackL.place(x=-2, y=-2)
+
+            self.Kimroot.title('MoCookie')  # 창 제목
+            self.Kimroot.geometry('600x600+340+20')
+            self.Kimroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            # frame = Frame(self.duneroot)
+            # frame.pack()
+
+            f = open("../MoCookie/MovieReview/KimSpoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Kimroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '왕십리 김종분':
+                    tmp += 20
+                    label = Label(self.Kimroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=330 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Kimroot, text="리뷰 작성", bg="forestgreen", command=self.writeReview)
+            button1.place(x="520", y="25")
+            self.Kimroot.label2 = Label(self.Kimroot, font=("휴먼편지체", 25), text="Kim Jong-boon of Wangshimni",
+                                        bg="white", fg="forestgreen")
+            self.Kimroot.label2.place(x="10", y="10")
+
+        # 실행
+        self.Kimroot.mainloop()
+    # ---------------------------------------------------------------------------------------------------
+    def Natagumo_GUI(self):
+        self.Natagumoroot = tkinter.Toplevel()  # 창 생성
+        self.Natagumoroot.title('MoCookie')  # 창 제목
+        self.Natagumoroot.geometry('600x600+340+20')
+        self.Natagumoroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.Natagumoroot.configure(bg="white")
+
+        self.Natagumoroot.label2 = Label(self.Natagumoroot, font=("휴먼편지체", 28), text="Demon Slayer", bg="white",
+                                         fg="firebrick")
+        self.Natagumoroot.label2.place(x="10", y="10")
+
+        self.Natagumoroot.image = tkinter.PhotoImage(file="../MoCookie/Poster/NatagumoPoster.png")
+        self.Natagumoroot.label = tkinter.Label(self.Natagumoroot, image=self.Natagumoroot.image,
+                                                bg="white")
+        self.Natagumoroot.label.place(x="195", y="55")
+
+        self.Natagumoroot.label1 = Label(self.Natagumoroot, font=("휴먼편지체", 17), text="쿠키 영상 없음", bg="white")
+        self.Natagumoroot.label1.place(x="233", y="360")
+
+        self.Natagumoroot.label2 = Label(self.Natagumoroot, font=("휴먼편지체", 12), text="개봉일 : 2021.11.17",
+                                         bg="white")
+        self.Natagumoroot.label2.place(x="234", y="395")
+
+        self.Natagumoroot.label3 = Label(self.Natagumoroot, font=("휴먼편지체", 12), text="장르 : 애니메이션",
+                                         bg="white")
+        self.Natagumoroot.label3.place(x="240", y="415")
+
+        self.Natagumoroot.label3 = Label(self.Natagumoroot, font=("휴먼편지체", 12), text="등급 : 15세이상 관람가",
+                                         bg="white")
+        self.Natagumoroot.label3.place(x="230", y="435")
+
+        self.Natagumoroot.label3 = Label(self.Natagumoroot, font=("휴먼편지체", 12), text="러닝타임 : 137분", bg="white")
+        self.Natagumoroot.label3.place(x="241", y="455")
+
+        self.Natagumoroot.label3 = Label(self.Natagumoroot, font=("휴먼편지체", 12),
+                                         text="추천 좌석 : D~G, 3~6 or 9~12", bg="white")
+        self.Natagumoroot.label3.place(x="203", y="475")
+
+        # 체크 박스
+        self.CheckVar = IntVar()
+
+        c1 = Checkbutton(self.Natagumoroot, text="스포리뷰", variable=self.CheckVar, font=("휴먼편지체", 10), bg="white")
+        c1.place(x="270", y="500")
+
+        button1 = Button(self.Natagumoroot, text="예매하기", font=("휴먼편지체", 11), bg="firebrick",
+                         command=self.NatagumoUrl)
+        button1.place(x="230", y="530")
+
+        button1 = Button(self.Natagumoroot, text="리뷰 보기", font=("휴먼편지체", 11), bg="firebrick",
+                         command=self.Natagumoreview)
+        button1.place(x="310", y="530")
+
+        # 실행
+        self.Natagumoroot.mainloop()
+
+    def NatagumoUrl(self):  # 영화 티켓 구매 웹사이트로 이동하는 함수
+        url = 'https://movie.yes24.com/Movie/Ticket?gId=M000125600'
+        webbrowser.open_new(url)
+
+    def Natagumoreview(self):
+        # 체크 안했을 때 -> 스포 없는 리뷰 보여주기
+        if self.CheckVar.get() == 0:
+
+            # main 화면 이미지 이미지를 덮는거임
+            self.Natagumoroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Natagumoroot.mainBackL = tkinter.Label(self.Natagumoroot,
+                                                        image=self.Natagumoroot.mainBack)
+            self.Natagumoroot.mainBackL.place(x=-2, y=-2)
+
+            self.Natagumoroot.title('MoCookie')  # 창 제목
+            self.Natagumoroot.geometry('600x600+340+20')
+            self.Natagumoroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            f = open("../MoCookie/MovieReview/NatagumoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Natagumoroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '귀멸의 칼날: 나타구모산 편':
+                    tmp += 20
+                    label = Label(self.Natagumoroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=480 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Natagumoroot, text="리뷰 작성", bg="firebrick", command=self.writeReview)
+            button1.place(x="520", y="25")  # button1.채워넣기(확장두께=1)
+
+            self.Natagumoroot.label2 = Label(self.Natagumoroot, font=("휴먼편지체", 28), text="Demon Slayer",
+                                             bg="white", fg="firebrick")
+            self.Natagumoroot.label2.place(x="10", y="10")
+
+        # 체크박스 체크 했을 떄 -> 스포 있는 리뷰
+        else:
+            # main 화면 이미지 이미지를 덮는거임
+            self.Natagumoroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Natagumoroot.mainBackL = tkinter.Label(self.Natagumoroot,
+                                                        image=self.Natagumoroot.mainBack)
+            self.Natagumoroot.mainBackL.place(x=-2, y=-2)
+
+            self.Natagumoroot.title('MoCookie')  # 창 제목
+            self.Natagumoroot.geometry('600x600+340+20')
+            self.Natagumoroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            # frame = Frame(self.duneroot)
+            # frame.pack()
+
+            f = open("../MoCookie/MovieReview/NatagumoSpoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Natagumoroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '귀멸의 칼날: 나타구모산 편':
+                    tmp += 20
+                    label = Label(self.Natagumoroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=350 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Natagumoroot, text="리뷰 작성", bg="firebrick", command=self.writeReview)
+            button1.place(x="520", y="25")
+            self.Natagumoroot.label2 = Label(self.Natagumoroot, font=("휴먼편지체", 28), text="Demon Slayer",
+                                             bg="white", fg="firebrick")
+            self.Natagumoroot.label2.place(x="10", y="10")
+
+        # 실행
+        self.Natagumoroot.mainloop()
+    # ---------------------------------------------------------------------------------------------------
+    def Nammae_GUI(self):
+        self.Nammaeroot = tkinter.Toplevel()  # 창 생성
+        self.Nammaeroot.title('MoCookie')  # 창 제목
+        self.Nammaeroot.geometry('600x600+340+20')
+        self.Nammaeroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.Nammaeroot.configure(bg="white")
+
+        self.Nammaeroot.label2 = Label(self.Nammaeroot, font=("휴먼편지체", 28), text="Demon Slayer", bg="white",
+                                       fg="gainsboro")
+        self.Nammaeroot.label2.place(x="10", y="10")
+
+        self.Nammaeroot.image = tkinter.PhotoImage(file="../MoCookie/Poster/NammaePoster.png")
+        self.Nammaeroot.label = tkinter.Label(self.Nammaeroot, image=self.Nammaeroot.image,
+                                              bg="white")
+        self.Nammaeroot.label.place(x="195", y="55")
+
+        self.Nammaeroot.label1 = Label(self.Nammaeroot, font=("휴먼편지체", 17), text="쿠키 영상 없음", bg="white")
+        self.Nammaeroot.label1.place(x="233", y="360")
+
+        self.Nammaeroot.label2 = Label(self.Nammaeroot, font=("휴먼편지체", 12), text="개봉일 : 2021.11.10",
+                                       bg="white")
+        self.Nammaeroot.label2.place(x="234", y="395")
+
+        self.Nammaeroot.label3 = Label(self.Nammaeroot, font=("휴먼편지체", 12), text="장르 : 애니메이션",
+                                       bg="white")
+        self.Nammaeroot.label3.place(x="240", y="415")
+
+        self.Nammaeroot.label3 = Label(self.Nammaeroot, font=("휴먼편지체", 12), text="등급 : 12세이상 관람가",
+                                       bg="white")
+        self.Nammaeroot.label3.place(x="230", y="435")
+
+        self.Nammaeroot.label3 = Label(self.Nammaeroot, font=("휴먼편지체", 12), text="러닝타임 : 105분", bg="white")
+        self.Nammaeroot.label3.place(x="241", y="455")
+
+        self.Nammaeroot.label3 = Label(self.Nammaeroot, font=("휴먼편지체", 12),
+                                       text="추천 좌석 : D~G, 3~6 or 9~12", bg="white")
+        self.Nammaeroot.label3.place(x="203", y="475")
+
+        # 체크 박스
+        self.CheckVar = IntVar()
+
+        c1 = Checkbutton(self.Nammaeroot, text="스포리뷰", variable=self.CheckVar, font=("휴먼편지체", 10), bg="white")
+        c1.place(x="270", y="500")
+
+        button1 = Button(self.Nammaeroot, text="예매하기", font=("휴먼편지체", 11), bg="gainsboro",
+                         command=self.NammaeUrl)
+        button1.place(x="230", y="530")
+
+        button1 = Button(self.Nammaeroot, text="리뷰 보기", font=("휴먼편지체", 11), bg="gainsboro",
+                         command=self.Nammaereview)
+        button1.place(x="310", y="530")
+
+        # 실행
+        self.Nammaeroot.mainloop()
+
+    def NammaeUrl(self):  # 영화 티켓 구매 웹사이트로 이동하는 함수
+        url = 'https://movie.yes24.com/Movie/Ticket?gId=M000125196'
+        webbrowser.open_new(url)
+
+    def Nammaereview(self):
+        # 체크 안했을 때 -> 스포 없는 리뷰 보여주기
+        if self.CheckVar.get() == 0:
+
+            # main 화면 이미지 이미지를 덮는거임
+            self.Nammaeroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Nammaeroot.mainBackL = tkinter.Label(self.Nammaeroot,
+                                                      image=self.Nammaeroot.mainBack)
+            self.Nammaeroot.mainBackL.place(x=-2, y=-2)
+
+            self.Nammaeroot.title('MoCookie')  # 창 제목
+            self.Nammaeroot.geometry('600x600+340+20')
+            self.Nammaeroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            f = open("../MoCookie/MovieReview/NammaeReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Nammaeroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '귀멸의 칼날-남매의 연':
+                    tmp += 20
+                    label = Label(self.Nammaeroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=450 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Nammaeroot, text="리뷰 작성", bg="gainsboro", command=self.writeReview)
+            button1.place(x="520", y="25")  # button1.채워넣기(확장두께=1)
+
+            self.Nammaeroot.label2 = Label(self.Nammaeroot, font=("휴먼편지체", 28), text="Demon Slayer",
+                                           bg="white", fg="gainsboro")
+            self.Nammaeroot.label2.place(x="10", y="10")
+
+        # 체크박스 체크 했을 떄 -> 스포 있는 리뷰
+        else:
+            # main 화면 이미지 이미지를 덮는거임
+            self.Nammaeroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Nammaeroot.mainBackL = tkinter.Label(self.Nammaeroot,
+                                                      image=self.Nammaeroot.mainBack)
+            self.Nammaeroot.mainBackL.place(x=-2, y=-2)
+
+            self.Nammaeroot.title('MoCookie')  # 창 제목
+            self.Nammaeroot.geometry('600x600+340+20')
+            self.Nammaeroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            # frame = Frame(self.duneroot)
+            # frame.pack()
+
+            f = open("../MoCookie/MovieReview/NammaeSpoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Nammaeroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '귀멸의 칼날-남매의 연':
+                    tmp += 20
+                    label = Label(self.Nammaeroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=330 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Nammaeroot, text="리뷰 작성", bg="gainsboro", command=self.writeReview)
+            button1.place(x="520", y="25")
+            self.Nammaeroot.label2 = Label(self.Nammaeroot, font=("휴먼편지체", 28), text="Demon Slayer",
+                                           bg="white", fg="gainsboro")
+            self.Nammaeroot.label2.place(x="10", y="10")
+
+        # 실행
+        self.Nammaeroot.mainloop()
+    # ---------------------------------------------------------------------------------------------------
+    def FirstCow_GUI(self):
+        self.FirstCowroot = tkinter.Toplevel()  # 창 생성
+        self.FirstCowroot.title('MoCookie')  # 창 제목
+        self.FirstCowroot.geometry('600x600+340+20')
+        self.FirstCowroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.FirstCowroot.configure(bg="white")
+
+        self.FirstCowroot.label2 = Label(self.FirstCowroot, font=("휴먼편지체", 28), text="FirstCowCrime", bg="white",
+                                         fg="gold")
+        self.FirstCowroot.label2.place(x="10", y="10")
+
+        self.FirstCowroot.image = tkinter.PhotoImage(file="Poster/FirstCowPoster.png")
+        self.FirstCowroot.label = tkinter.Label(self.FirstCowroot, image=self.FirstCowroot.image,
+                                                bg="white")
+        self.FirstCowroot.label.place(x="195", y="55")
+
+        self.FirstCowroot.label1 = Label(self.FirstCowroot, font=("휴먼편지체", 17), text="쿠키 영상 없음", bg="white")
+        self.FirstCowroot.label1.place(x="233", y="360")
+
+        self.FirstCowroot.label2 = Label(self.FirstCowroot, font=("휴먼편지체", 12), text="개봉일 : 2021.11.04",
+                                         bg="white")
+        self.FirstCowroot.label2.place(x="234", y="395")
+
+        self.FirstCowroot.label3 = Label(self.FirstCowroot, font=("휴먼편지체", 12), text="장르 : 드라마",
+                                         bg="white")
+        self.FirstCowroot.label3.place(x="253", y="415")
+
+        self.FirstCowroot.label3 = Label(self.FirstCowroot, font=("휴먼편지체", 12), text="등급 : 12세이상 관람가",
+                                         bg="white")
+        self.FirstCowroot.label3.place(x="230", y="435")
+
+        self.FirstCowroot.label3 = Label(self.FirstCowroot, font=("휴먼편지체", 12), text="러닝타임 : 122분", bg="white")
+        self.FirstCowroot.label3.place(x="241", y="455")
+
+        self.FirstCowroot.label3 = Label(self.FirstCowroot, font=("휴먼편지체", 12),
+                                         text="추천 좌석 : F~G, 6~9", bg="white")
+        self.FirstCowroot.label3.place(x="233", y="475")
+
+        # 체크 박스
+        self.CheckVar = IntVar()
+
+        c1 = Checkbutton(self.FirstCowroot, text="스포리뷰", variable=self.CheckVar, font=("휴먼편지체", 10), bg="white")
+        c1.place(x="270", y="500")
+
+        button1 = Button(self.FirstCowroot, text="예매하기", font=("휴먼편지체", 11), bg="gold",
+                         command=self.FirstCowUrl)
+        button1.place(x="230", y="530")
+
+        button1 = Button(self.FirstCowroot, text="리뷰 보기", font=("휴먼편지체", 11), bg="gold",
+                         command=self.FirstCowreview)
+        button1.place(x="310", y="530")
+
+        # 실행
+        self.FirstCowroot.mainloop()
+
+    def FirstCowUrl(self):  # 영화 티켓 구매 웹사이트로 이동하는 함수
+        url = 'https://movie.yes24.com/Movie/Ticket?gId=M000125298'
+        webbrowser.open_new(url)
+
+    def FirstCowreview(self):
+        # 체크 안했을 때 -> 스포 없는 리뷰 보여주기
+        if self.CheckVar.get() == 0:
+
+            # main 화면 이미지 이미지를 덮는거임
+            self.FirstCowroot.mainBack = tkinter.PhotoImage(file="Img/img_7.png")
+            self.FirstCowroot.mainBackL = tkinter.Label(self.FirstCowroot,
+                                                        image=self.FirstCowroot.mainBack)
+            self.FirstCowroot.mainBackL.place(x=-2, y=-2)
+
+            self.FirstCowroot.title('MoCookie')  # 창 제목
+            self.FirstCowroot.geometry('600x600+340+20')
+            self.FirstCowroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            f = open("MovieReview/FirstCowReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.FirstCowroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '퍼스트 카우':
+                    tmp += 20
+                    label = Label(self.FirstCowroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=475 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.FirstCowroot, text="리뷰 작성", bg="gold", command=self.writeReview)
+            button1.place(x="520", y="25")  # button1.채워넣기(확장두께=1)
+
+            self.FirstCowroot.label2 = Label(self.FirstCowroot, font=("휴먼편지체", 28), text="FirstCowCrime",
+                                             bg="white", fg="gold")
+            self.FirstCowroot.label2.place(x="10", y="10")
+
+        # 체크박스 체크 했을 떄 -> 스포 있는 리뷰
+        else:
+            # main 화면 이미지 이미지를 덮는거임
+            self.FirstCowroot.mainBack = tkinter.PhotoImage(file="Img/img_7.png")
+            self.FirstCowroot.mainBackL = tkinter.Label(self.FirstCowroot,
+                                                        image=self.FirstCowroot.mainBack)
+            self.FirstCowroot.mainBackL.place(x=-2, y=-2)
+
+            self.FirstCowroot.title('MoCookie')  # 창 제목
+            self.FirstCowroot.geometry('600x600+340+20')
+            self.FirstCowroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            # frame = Frame(self.duneroot)
+            # frame.pack()
+
+            f = open("MovieReview/FirstCowSpoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.FirstCowroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '퍼스트 카우':
+                    tmp += 20
+                    label = Label(self.FirstCowroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=340 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.FirstCowroot, text="리뷰 작성", bg="gold", command=self.writeReview)
+            button1.place(x="520", y="25")
+            self.FirstCowroot.label2 = Label(self.FirstCowroot, font=("휴먼편지체", 28), text="FirstCowCrime",
+                                             bg="white", fg="gold")
+            self.FirstCowroot.label2.place(x="10", y="10")
+
+        # 실행
+        self.FirstCowroot.mainloop()
+    # ---------------------------------------------------------------------------------------------------
+    def Italy_GUI(self):
+        self.Italyroot = tkinter.Toplevel()  # 창 생성
+        self.Italyroot.title('MoCookie')  # 창 제목
+        self.Italyroot.geometry('600x600+340+20')
+        self.Italyroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.Italyroot.configure(bg="white")
+
+        self.Italyroot.label2 = Label(self.Italyroot, font=("휴먼편지체", 25), text="Made In Italy", bg="white",
+                                      fg="peachpuff")
+        self.Italyroot.label2.place(x="10", y="10")
+
+        self.Italyroot.image = tkinter.PhotoImage(file="Poster/ItalyPoster.png")
+        self.Italyroot.label = tkinter.Label(self.Italyroot, image=self.Italyroot.image,
+                                             bg="white")
+        self.Italyroot.label.place(x="195", y="55")
+
+        self.Italyroot.label1 = Label(self.Italyroot, font=("휴먼편지체", 17), text="쿠키 영상 없음", bg="white")
+        self.Italyroot.label1.place(x="233", y="360")
+
+        self.Italyroot.label2 = Label(self.Italyroot, font=("휴먼편지체", 12), text="개봉일 : 2021.11.24",
+                                      bg="white")
+        self.Italyroot.label2.place(x="234", y="395")
+
+        self.Italyroot.label3 = Label(self.Italyroot, font=("휴먼편지체", 12), text="장르 : 코미디, 드라마, 멜로/로맨스",
+                                      bg="white")
+        self.Italyroot.label3.place(x="200", y="415")
+
+        self.Italyroot.label3 = Label(self.Italyroot, font=("휴먼편지체", 12), text="등급 : 12세이상 관람가",
+                                      bg="white")
+        self.Italyroot.label3.place(x="230", y="435")
+
+        self.Italyroot.label3 = Label(self.Italyroot, font=("휴먼편지체", 12), text=" 러닝타임 : 94분", bg="white")
+        self.Italyroot.label3.place(x="241", y="455")
+
+        self.Italyroot.label3 = Label(self.Italyroot, font=("휴먼편지체", 12),
+                                      text="추천 좌석 : G~H, 1~4 or 11~14", bg="white")
+        self.Italyroot.label3.place(x="203", y="475")
+
+        # 체크 박스
+        self.CheckVar = IntVar()
+
+        c1 = Checkbutton(self.Italyroot, text="스포리뷰", variable=self.CheckVar, font=("휴먼편지체", 10), bg="white")
+        c1.place(x="270", y="500")
+
+        button1 = Button(self.Italyroot, text="예매하기", font=("휴먼편지체", 11), bg="peachpuff",
+                         command=self.ItalyUrl)
+        button1.place(x="230", y="530")
+
+        button1 = Button(self.Italyroot, text="리뷰 보기", font=("휴먼편지체", 11), bg="peachpuff",
+                         command=self.Italyreview)
+        button1.place(x="310", y="530")
+
+        # 실행
+        self.Italyroot.mainloop()
+
+    def ItalyUrl(self):  # 영화 티켓 구매 웹사이트로 이동하는 함수
+        url = 'https://movie.yes24.com/Movie/Ticket?gId=M000125551'
+        webbrowser.open_new(url)
+
+    def Italyreview(self):
+        # 체크 안했을 때 -> 스포 없는 리뷰 보여주기
+        if self.CheckVar.get() == 0:
+
+            # main 화면 이미지 이미지를 덮는거임
+            self.Italyroot.mainBack = tkinter.PhotoImage(file="Img/img_7.png")
+            self.Italyroot.mainBackL = tkinter.Label(self.Italyroot,
+                                                     image=self.Italyroot.mainBack)
+            self.Italyroot.mainBackL.place(x=-2, y=-2)
+
+            self.Italyroot.title('MoCookie')  # 창 제목
+            self.Italyroot.geometry('600x600+340+20')
+            self.Italyroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            f = open("MovieReview/ItalyReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Italyroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '메이드 인 이태리':
+                    tmp += 20
+                    label = Label(self.Italyroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=480 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Italyroot, text="리뷰 작성", bg="peachpuff", command=self.writeReview)
+            button1.place(x="520", y="25")  # button1.채워넣기(확장두께=1)
+
+            self.Italyroot.label2 = Label(self.Italyroot, font=("휴먼편지체", 25), text="Made In Italy",
+                                          bg="white", fg="peachpuff")
+            self.Italyroot.label2.place(x="10", y="10")
+
+        # 체크박스 체크 했을 떄 -> 스포 있는 리뷰
+        else:
+            # main 화면 이미지 이미지를 덮는거임
+            self.Italyroot.mainBack = tkinter.PhotoImage(file="Img/img_7.png")
+            self.Italyroot.mainBackL = tkinter.Label(self.Italyroot,
+                                                     image=self.Italyroot.mainBack)
+            self.Italyroot.mainBackL.place(x=-2, y=-2)
+
+            self.Italyroot.title('MoCookie')  # 창 제목
+            self.Italyroot.geometry('600x600+340+20')
+            self.Italyroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            # frame = Frame(self.duneroot)
+            # frame.pack()
+
+            f = open("MovieReview/ItalySpoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Italyroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '메이드 인 이태리':
+                    tmp += 20
+                    label = Label(self.Italyroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=330 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Italyroot, text="리뷰 작성", bg="peachpuff", command=self.writeReview)
+            button1.place(x="520", y="25")
+            self.Italyroot.label2 = Label(self.Italyroot, font=("휴먼편지체", 25), text="Made In Italy",
+                                          bg="white", fg="peachpuff")
+            self.Italyroot.label2.place(x="10", y="10")
+
+        # 실행
+        self.Italyroot.mainloop()
+    # ---------------------------------------------------------------------------------------------------
+    def Choi_GUI(self):
+        self.Choiroot = tkinter.Toplevel()  # 창 생성
+        self.Choiroot.title('MoCookie')  # 창 제목
+        self.Choiroot.geometry('600x600+340+20')
+        self.Choiroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.Choiroot.configure(bg="white")
+
+        self.Choiroot.label2 = Label(self.Choiroot, font=("휴먼편지체", 25), text="1984 CHOI Dong-won", bg="white",
+                                     fg="darkslategrey")
+        self.Choiroot.label2.place(x="10", y="10")
+
+        self.Choiroot.image = tkinter.PhotoImage(file="../MoCookie/Poster/ChoiPoster.png")
+        self.Choiroot.label = tkinter.Label(self.Choiroot, image=self.Choiroot.image,
+                                            bg="white")
+        self.Choiroot.label.place(x="195", y="55")
+
+        self.Choiroot.label1 = Label(self.Choiroot, font=("휴먼편지체", 17), text="쿠키 영상 없음", bg="white")
+        self.Choiroot.label1.place(x="233", y="360")
+
+        self.Choiroot.label2 = Label(self.Choiroot, font=("휴먼편지체", 12), text="개봉일 : 2021.11.11",
+                                     bg="white")
+        self.Choiroot.label2.place(x="234", y="395")
+
+        self.Choiroot.label3 = Label(self.Choiroot, font=("휴먼편지체", 12), text="장르 : 다큐멘터리",
+                                     bg="white")
+        self.Choiroot.label3.place(x="243", y="415")
+
+        self.Choiroot.label3 = Label(self.Choiroot, font=("휴먼편지체", 12), text="등급 : 전체 관람가",
+                                     bg="white")
+        self.Choiroot.label3.place(x="240", y="435")
+
+        self.Choiroot.label3 = Label(self.Choiroot, font=("휴먼편지체", 12), text=" 러닝타임 : 99분", bg="white")
+        self.Choiroot.label3.place(x="241", y="455")
+
+        self.Choiroot.label3 = Label(self.Choiroot, font=("휴먼편지체", 12),
+                                     text="추천 좌석 : F~G, 6~9", bg="white")
+        self.Choiroot.label3.place(x="233", y="475")
+
+        # 체크 박스
+        self.CheckVar = IntVar()
+
+        c1 = Checkbutton(self.Choiroot, text="스포리뷰", variable=self.CheckVar, font=("휴먼편지체", 10), bg="white")
+        c1.place(x="270", y="500")
+
+        button1 = Button(self.Choiroot, text="예매하기", font=("휴먼편지체", 11), bg="darkslategrey",
+                         command=self.ChoiUrl)
+        button1.place(x="230", y="530")
+
+        button1 = Button(self.Choiroot, text="리뷰 보기", font=("휴먼편지체", 11), bg="darkslategrey",
+                         command=self.Choireview)
+        button1.place(x="310", y="530")
+
+        # 실행
+        self.Choiroot.mainloop()
+
+    def ChoiUrl(self):  # 영화 티켓 구매 웹사이트로 이동하는 함수
+        url = 'https://movie.yes24.com/Movie/Ticket?gId=M000125470'
+        webbrowser.open_new(url)
+
+    def Choireview(self):
+        # 체크 안했을 때 -> 스포 없는 리뷰 보여주기
+        if self.CheckVar.get() == 0:
+
+            # main 화면 이미지 이미지를 덮는거임
+            self.Choiroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Choiroot.mainBackL = tkinter.Label(self.Choiroot,
+                                                    image=self.Choiroot.mainBack)
+            self.Choiroot.mainBackL.place(x=-2, y=-2)
+
+            self.Choiroot.title('MoCookie')  # 창 제목
+            self.Choiroot.geometry('600x600+340+20')
+            self.Choiroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            f = open("../MoCookie/MovieReview/ChoiReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Choiroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '1984 최동원':
+                    tmp += 20
+                    label = Label(self.Choiroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=470 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Choiroot, text="리뷰 작성", bg="darkslategrey", command=self.writeReview)
+            button1.place(x="520", y="25")  # button1.채워넣기(확장두께=1)
+
+            self.Choiroot.label2 = Label(self.Choiroot, font=("휴먼편지체", 25), text="1984 CHOI Dong-won",
+                                         bg="white", fg="darkslategrey")
+            self.Choiroot.label2.place(x="10", y="10")
+
+        # 체크박스 체크 했을 떄 -> 스포 있는 리뷰
+        else:
+            # main 화면 이미지 이미지를 덮는거임
+            self.Choiroot.mainBack = tkinter.PhotoImage(file="../MoCookie/Img/img_7.png")
+            self.Choiroot.mainBackL = tkinter.Label(self.Choiroot,
+                                                    image=self.Choiroot.mainBack)
+            self.Choiroot.mainBackL.place(x=-2, y=-2)
+
+            self.Choiroot.title('MoCookie')  # 창 제목
+            self.Choiroot.geometry('600x600+340+20')
+            self.Choiroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            # frame = Frame(self.duneroot)
+            # frame.pack()
+
+            f = open("../MoCookie/MovieReview/ChoiSpoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Choiroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('../MoCookie/MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '1984 최동원':
+                    tmp += 20
+                    label = Label(self.Choiroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=340 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Choiroot, text="리뷰 작성", bg="darkslategrey", command=self.writeReview)
+            button1.place(x="520", y="25")
+            self.Choiroot.label2 = Label(self.Choiroot, font=("휴먼편지체", 25), text="1984 CHOI Dong-won",
+                                         bg="white", fg="forestgreen")
+            self.Choiroot.label2.place(x="10", y="10")
+
+        # 실행
+        self.Choiroot.mainloop()
+    # ---------------------------------------------------------------------------------------------------
+    def Leave_GUI(self):
+        self.Leaveroot = tkinter.Toplevel()  # 창 생성
+        self.Leaveroot.title('MoCookie')  # 창 제목
+        self.Leaveroot.geometry('600x600+340+20')
+        self.Leaveroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+        self.Leaveroot.configure(bg="white")
+
+        self.Leaveroot.label2 = Label(self.Leaveroot, font=("휴먼편지체", 28), text="A Leave", bg="white",
+                                      fg="lightblue")
+        self.Leaveroot.label2.place(x="10", y="10")
+
+        self.Leaveroot.image = tkinter.PhotoImage(file="Poster/LeavePoster.png")
+        self.Leaveroot.label = tkinter.Label(self.Leaveroot, image=self.Leaveroot.image,
+                                             bg="white")
+        self.Leaveroot.label.place(x="195", y="55")
+
+        self.Leaveroot.label1 = Label(self.Leaveroot, font=("휴먼편지체", 17), text="쿠키 영상 없음", bg="white")
+        self.Leaveroot.label1.place(x="233", y="360")
+
+        self.Leaveroot.label2 = Label(self.Leaveroot, font=("휴먼편지체", 12), text="개봉일 : 2021.10.21",
+                                      bg="white")
+        self.Leaveroot.label2.place(x="234", y="395")
+
+        self.Leaveroot.label3 = Label(self.Leaveroot, font=("휴먼편지체", 12), text="장르 : 드라마",
+                                      bg="white")
+        self.Leaveroot.label3.place(x="253", y="415")
+
+        self.Leaveroot.label3 = Label(self.Leaveroot, font=("휴먼편지체", 12), text="등급 : 12세이상 관람가",
+                                      bg="white")
+        self.Leaveroot.label3.place(x="230", y="435")
+
+        self.Leaveroot.label3 = Label(self.Leaveroot, font=("휴먼편지체", 12), text=" 러닝타임 : 18분", bg="white")
+        self.Leaveroot.label3.place(x="241", y="455")
+
+        self.Leaveroot.label3 = Label(self.Leaveroot, font=("휴먼편지체", 12),
+                                      text="추천 좌석 : F~G, 6~9", bg="white")
+        self.Leaveroot.label3.place(x="233", y="475")
+
+        # 체크 박스
+        self.CheckVar = IntVar()
+
+        c1 = Checkbutton(self.Leaveroot, text="스포리뷰", variable=self.CheckVar, font=("휴먼편지체", 10), bg="white")
+        c1.place(x="270", y="500")
+
+        button1 = Button(self.Leaveroot, text="예매하기", font=("휴먼편지체", 11), bg="lightblue",
+                         command=self.LeaveUrl)
+        button1.place(x="230", y="530")
+
+        button1 = Button(self.Leaveroot, text="리뷰 보기", font=("휴먼편지체", 11), bg="lightblue",
+                         command=self.Leavereview)
+        button1.place(x="310", y="530")
+
+        # 실행
+        self.Leaveroot.mainloop()
+
+    def LeaveUrl(self):  # 영화 티켓 구매 웹사이트로 이동하는 함수
+        url = 'https://movie.yes24.com/Movie/Ticket?gId=M000125312'
+        webbrowser.open_new(url)
+
+    def Leavereview(self):
+        # 체크 안했을 때 -> 스포 없는 리뷰 보여주기
+        if self.CheckVar.get() == 0:
+
+            # main 화면 이미지 이미지를 덮는거임
+            self.Leaveroot.mainBack = tkinter.PhotoImage(file="Img/img_7.png")
+            self.Leaveroot.mainBackL = tkinter.Label(self.Leaveroot,
+                                                     image=self.Leaveroot.mainBack)
+            self.Leaveroot.mainBackL.place(x=-2, y=-2)
+
+            self.Leaveroot.title('MoCookie')  # 창 제목
+            self.Leaveroot.geometry('600x600+340+20')
+            self.Leaveroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            f = open("MovieReview/LeaveReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Leaveroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '휴가':
+                    tmp += 20
+                    label = Label(self.Leaveroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=355 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Leaveroot, text="리뷰 작성", bg="lightblue", command=self.writeReview)
+            button1.place(x="520", y="25")  # button1.채워넣기(확장두께=1)
+
+            self.Leaveroot.label2 = Label(self.Leaveroot, font=("휴먼편지체", 28), text="A Leave",
+                                          bg="white", fg="lightblue")
+            self.Leaveroot.label2.place(x="10", y="10")
+
+        # 체크박스 체크 했을 떄 -> 스포 있는 리뷰
+        else:
+            # main 화면 이미지 이미지를 덮는거임
+            self.Leaveroot.mainBack = tkinter.PhotoImage(file="Img/img_7.png")
+            self.Leaveroot.mainBackL = tkinter.Label(self.Leaveroot,
+                                                     image=self.Leaveroot.mainBack)
+            self.Leaveroot.mainBackL.place(x=-2, y=-2)
+
+            self.Leaveroot.title('MoCookie')  # 창 제목
+            self.Leaveroot.geometry('600x600+340+20')
+            self.Leaveroot.resizable(width=False, height=False)  # 리사이즈 가로 세로 여부
+
+            # frame = Frame(self.duneroot)
+            # frame.pack()
+
+            f = open("MovieReview/LeaveSpoReview.txt", 'r', encoding="UTF-8")
+            text = f.read()
+            label = tkinter.Label(self.Leaveroot, width=600, height=600, bg="white", font=("휴먼편지체", 10), text=text)
+            label.pack()
+            fr = open('MyReview.txt', 'r', encoding='utf-8')
+            arr = []
+            arr1 = []
+            tmp = 0
+            while True:
+                review_loaded = fr.readline()
+                if not review_loaded: break
+                arr = review_loaded.split('\t')
+                arr1.append(arr)
+            for a in arr1:
+                if a[1] == '휴가':
+                    tmp += 20
+                    label = Label(self.Leaveroot, text=f'- {a[3]}', bg='white', font=("휴먼편지체", 10))
+                    label.place(x=180, y=365 + tmp)
+
+            # 버튼 출력
+            button1 = Button(self.Leaveroot, text="리뷰 작성", bg="lightblue", command=self.writeReview)
+            button1.place(x="520", y="25")
+            self.Leaveroot.label2 = Label(self.Leaveroot, font=("휴먼편지체", 28), text="A Leave",
+                                          bg="white", fg="lightblue")
+            self.Leaveroot.label2.place(x="10", y="10")
+
+        # 실행
+        self.Leaveroot.mainloop()
+    # ---------------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------------
     # ---------------------------------------------------------------------------------------------------
     # ---------------------------------------------------------------------------------------------------
     # ---------------------------------------------------------------------------------------------------
@@ -2106,7 +3399,7 @@ class MovieGUI:
         self.entry1 = Entry(self.writereview, width=20, font=("휴먼편지체", 10), textvariable=str)  # 이름 입력
         self.entry1.place(x=205, y=80)
         a = ["듄", "유체이탈자", "연애 빠진 로맨스", "엔칸토-마법의 세계", "이터널스", "장르만 로맨스", "프렌치 디스패치", "너에게 가는 길", "라임 크라임", "호빗: 스마우그의 폐허", "로그북",
-             "디어 에반 핸슨", "꽃다발 같은 사랑을 했다", "행복의 속도", "왕십리 김종분", "귀멸의 칼날: 나타구모산 편", "귀멸의 칼날-남매의 연", "퍼스트 카우", "메이드 인 이태리", "1984 최동원", "휴가", "너의 이름은"]  # 콤보 박스
+             "디어 에반 핸슨", "꽃다발 같은 사랑을 했다", "너의 이름은", "왕십리 김종분", "귀멸의 칼날: 나타구모산 편", "귀멸의 칼날-남매의 연", "퍼스트 카우", "메이드 인 이태리", "1984 최동원", "휴가"]  # 콤보 박스
         self.combo1 = ttk.Combobox(self.writereview)
         self.combo1.config(height=5, width=30)  # 높이 설정
         self.combo1.config(values=a, font=("휴먼편지체", 10))  # 나타낼 항목 리스트(a) 설정
